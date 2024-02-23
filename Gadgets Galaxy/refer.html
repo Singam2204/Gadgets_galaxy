@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat-Gadgets-Refer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: white;
+        background-color: rgb(239, 224, 224);
+
+    }
+    footer {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+
+    }
+
+    footer i {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+    .navbar li{
+        margin-left: 30%;
+        font-size: 20px;
+        font-family: monospace;
+    }
+    .login li  {
+        margin-left: 0;
+      
+    }
+    .navbar a:hover{
+        border-bottom: 2px solid black;
+    }
+    .one{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .one h1{
+        font-size: 50px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .one h5{
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    .one p{
+        margin-top: 40px;
+        margin-left: 20px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .one label{
+        font-weight: bold;
+        font-size: 25px;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+    .one input{
+        width: 40%;
+        margin-left: 20px;
+        padding: 5px;
+        height: 50px;
+       
+    }
+    .one button{
+        margin-left: 20px;
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border: none;
+        width: 40%;
+    }
+    @media (max-width: 768px) {
+        .one{
+            flex-direction: column;
+        }
+        .one img{
+            width: 100%;
+        }
+    }
+    button a{
+        text-decoration: none;
+        color: white;
+    }
+   
+
+</style>
+<body>
+     <!-- navbar starts -->
+
+     <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="logo" height="40px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="refer.html">Refer</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="navbar-nav login">
+            <li><a class="nav-link active one" href="Login.html" style="margin-right: 20px;">Join</a></li>
+            <li><a class="nav-link active " href="cart.html" style="padding-right: 20px;"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+    <!-- navbar endss -->
+
+    <div class="container-fluid one">
+        <img src="images/refer.webp" alt="" width="50%">
+        <form>
+            <h1>Share the Pulse & Double the Vibe!</h1>
+            <h5>Refer a friend & you both get 100 boAt Reward Points</h5>
+            <p>Login to Refer!</p>
+            <label>Your Friend's Name:</label> <br> <br>
+            <input type="text" placeholder="Type Here"> <br> <br>
+            <button><a href="Login.html"> Login Now</a></button>
+            <p>Note: Your friend gets instant rewards while you get them upon delivery🌟</p>
+
+        </form>
+    </div>
+    <footer>
+        <p>Let's get social</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-solid fa-x"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+
+
+    </footer>
+    
+</body>
+</html>

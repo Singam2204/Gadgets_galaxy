@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat-Gadgets-Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: rgb(239, 224, 224);
+
+    }
+
+    footer {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        padding: 10px;
+
+    }
+
+    footer i {
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+
+    .navbar li {
+        margin-left: 30%;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .login li {
+        margin-left: 0;
+
+    }
+
+    .navbar a:hover {
+        border-bottom: 2px solid black;
+    }
+
+    .product {
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    .product h3 {
+        color: brown;
+        margin-top: 10px;
+    }
+
+    .product p {
+        font-size: 20px;
+        font-weight: bold;
+        color: blue;
+    }
+
+    .product button {
+        background-color: rgb(39, 74, 18);
+        border: none;
+        border: 1px solid black;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        color: white;
+    }
+
+    #cart {
+        border: 2px solid black;
+        height: 100%;
+        background-color: rgb(239, 222, 225);
+
+
+    }
+
+    #cart h2 {
+        background-color: rgb(109, 115, 21);
+        color: white;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #cart li {
+        list-style-type: decimal;
+        font-size: 20px;
+        font-weight: 450;
+    }
+
+    #cart p {
+        font-size: 20px;
+        margin-left: 20px;
+        font-weight: bold;
+
+    }
+
+    #cart button {
+        background-color: green;
+        margin-left: 20px;
+        font-size: 20px;
+        color: white;
+        border: none;
+        padding: 5px;
+    }
+
+    #cart button:hover {
+        background-color: rgb(61, 162, 61);
+    }
+</style>
+</head>
+
+<body>
+    <!-- navbar starts -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="logo" height="40px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="refer.html">Refer</a>
+                    </li>
+                </ul>
+            </div>
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    id="searchInput" style="width: 60%;">
+        </div>
+        <ul class="navbar-nav login">
+            <li><a class="nav-link active one" href="Login.html" style="margin-right: 20px;">Join</a></li>
+            <li><a class="nav-link active " href="cart.html" style="padding-right: 20px;"><i
+                        class="fa-solid fa-cart-shopping"></i></a></li>
+        </ul>
+    </nav>
+    <!-- navbar endss -->
+
+    <div class="container" id="product-container">
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="product" data-id="1" data-name="Airdopes 131" data-price="899.00">
+                    <img src="images/earbuds.webp" alt="" width="100%">
+                    <h3>Airdopes 131</h3>
+                    <p>₹899/-</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product" data-id="2" data-name="Smart Watch" data-price="3499.00">
+                    <img src="images/watch.webp" alt="" width="100%">
+                    <h3>Smart Watch</h3>
+                    <p>₹3499/-</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product" data-id="3" data-name="Headphone" data-price="4499.00">
+                    <img src="images/headphone.webp" alt="" width="100%">
+                    <h3>Nirvaana 751 ANC</h3>
+                    <p>₹4499/-</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="product" data-id="4" data-name="Soundbar" data-price="7499.00">
+                    <img src="images/sound.webp" alt="" width="100%">
+                    <h3>Party Pal 195</h3>
+                    <p>₹7499/-</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product" data-id="5" data-name="Speaker" data-price="2199.00">
+                    <img src="images/speaker.webp" alt="" width="100%">
+                    <h3>Stone 750</h3>
+                    <p>₹2199/-</p>
+                    <button onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="col-md-4" style="height: auto;">
+                <div id="cart">
+                    <h2>Shopping Cart</h2>
+                    <ul id="cart-items">
+
+                    </ul>
+                    <p>Total: ₹<span id="cart-total">0.00</span></p>
+                    <button onclick="placeOrder()">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-3">
+        <p>Let's get social</p>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-solid fa-x"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+
+
+    </footer>
+
+    <script>
+        function addToCart(button) {
+            var product = button.parentNode;
+            var productId = product.getAttribute('data-id');
+            var productName = product.getAttribute('data-name');
+            var productPrice = parseFloat(product.getAttribute('data-price'));
+
+            var cartItems = document.getElementById('cart-items');
+            var cartTotalElement = document.getElementById('cart-total');
+
+            // Check if the product is already in the cart
+            var existingCartItem = document.querySelector(`#cart-items li[data-id="${productId}"]`);
+            if (existingCartItem) {
+                // Increment the quantity if the product is already in the cart
+                var quantityElement = existingCartItem.querySelector('span.quantity');
+                var quantity = parseInt(quantityElement.textContent);
+                quantityElement.textContent = quantity + 1;
+            } else {
+                // Create a new cart item if the product is not in the cart
+                var cartItem = document.createElement('li');
+                cartItem.setAttribute('data-id', productId);
+                cartItem.innerHTML = `${productName} - <span class="quantity">1</span>`;
+                cartItems.appendChild(cartItem);
+            }
+
+            var currentTotal = parseFloat(cartTotalElement.textContent);
+            cartTotalElement.textContent = (currentTotal + productPrice).toFixed(2);
+        }
+
+        function placeOrder() {
+            alert('Order placed successfully!');
+        }
+   
+    </script>
+
+</body>
+
+</html>
